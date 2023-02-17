@@ -19,7 +19,7 @@
               </div>
             </div>
             <div class="navbar-end">
-              <button type="button" class="btn bg-sky-600 px-7 capitalize inline-block">Blog</button>
+              <button onclick="window.location.href='blog.html'" type="button" class="btn bg-sky-600 px-7 capitalize inline-block">Blog</button>
             </div>
         </div>
     </header>
@@ -30,64 +30,64 @@
                 <div class="md:w-9/12">
                     <div class="grid md:grid-cols-3 md:grid-rows-2 gap-6">
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/triangle.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/triangle.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Triangle</h2>
-                              <p>Area (A) = <span>0.5</span> x <span>W</span> x <span>I</span></p>
+                              <p>Area (A) = <span id="triangle-half">0.5</span> x <span>W</span> x <span>I</span></p>
                               <div>
-                                <input class="w-12 bg-slate-400" type="text">
+                                <input id="triangle-width" class="w-12 bg-slate-400" type="text">
                                 <span>cm</span>
-                                <input class="w-12 bg-slate-400" type="text">
+                                <input id="trianlge-height" class="w-12 bg-slate-400" type="text">
                                 <span>cm</span>
                               </div>
                               <div class="card-actions w-full mt-4">
-                                <button class="btn btn-primary w-full">Calculate</button>
+                                <button id="triangle" class="btn btn-primary w-full">Calculate</button>
                               </div>
                             </div>
                         </div>
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/rectangle.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/rectangle.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Rectangle</h2>
                               <p>Area (A) = <span>W</span> x <span>I</span></p>
                               <div>
-                                <input class="w-12 bg-slate-400" type="text" placeholder="W">
+                                <input id="rectangle-width" class="w-12 bg-slate-400" type="text" placeholder="W">
                                 <span>cm</span>
-                                <input class="w-12 bg-slate-400" type="text" placeholder="I">
+                                <input id="rectangle-height" class="w-12 bg-slate-400" type="text" placeholder="I">
                                 <span>cm</span>
                               </div>
                               <div class="card-actions w-full mt-4">
-                                <button class="btn btn-primary w-full">Calculate</button>
+                                <button id="rectangle" class="btn btn-primary w-full">Calculate</button>
                               </div>
                             </div>
                         </div>
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/parallelogram.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Parallelogram</h2>
                               <p>Area (A) = <span>b</span> x <span>h</span></p>
                               <div>
                                 <p>
-                                    <input class="w-12 bg-slate-400" type="text" placeholder="b">
+                                    <input id="parallelogram-width" class="w-12 bg-slate-400" type="text" placeholder="b">
                                     <span>cm,</span>
-                                    <input class="w-12 bg-slate-400" type="text" placeholder="h">
+                                    <input id="parallelogram-height" class="w-12 bg-slate-400" type="text" placeholder="h">
                                     <span>cm</span>
                                 </p>
                               </div>
                               <div class="card-actions w-full mt-4">
-                                <button class="btn btn-primary w-full">Calculate</button>
+                                <button id="parallelogram" class="btn btn-primary w-full">Calculate</button>
                               </div>
                             </div>
                         </div>
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/rhombus.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/rhombus.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Rhombus</h2>
@@ -112,8 +112,8 @@
                             </div>
                         </div>
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/pentagon.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/pentagon.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Pentagon</h2>
@@ -138,8 +138,8 @@
                             </div>
                         </div>
                         <div class="card border">
-                            <figure class="px-10 pt-10">
-                              <img src="images/ellipse.png" alt="Shoes" class="rounded-xl h-48" />
+                            <figure class="px-10 pt-10 h-48">
+                              <img src="images/ellipse.png" alt="Shoes" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Ellipse</h2>
@@ -170,6 +170,9 @@
                         <div class="card-body items-center text-center">
                           <h2 class="card-title underline">Area Calculate</h2>
                         </div>
+                        <table class="calculate">
+                            
+                        </table>
                     </div>
                 </div>
             </div>
