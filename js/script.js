@@ -2,7 +2,7 @@ let serial = 0;
 // get the inner text of the element
 function getInnerText (para) {
     const element = document.getElementById(para);
-    const elementText = parseFloat(element.innerText);
+    const elementText = parseInt(element.innerText);
     return elementText;
 }
 
