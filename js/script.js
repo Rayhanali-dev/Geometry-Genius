@@ -1,18 +1,20 @@
 
 let serial = 0;
-
+// get the inner text of the element
 function getInnerText (para) {
     const element = document.getElementById(para);
     const elementText = parseInt(element.innerText);
     return elementText;
 }
 
+// get the input value of the input field
 function getInputValue (id) {
     const input = document.getElementById(id);
     const inputValue = parseInt(input.value);
     return inputValue;
 }
 
+// multiplicatios
 function multiplications (w, h, half) {
     if (half == false) {
         const multiplicationTwo = w * h;
@@ -22,6 +24,7 @@ function multiplications (w, h, half) {
     return multiplicationThree;
 }
 
+// create a dynamic table row
 function tablecreate(serial, name, area) {
     const tables = document.getElementById('calculate');
     const tr = document.createElement("tr");
@@ -33,8 +36,6 @@ function tablecreate(serial, name, area) {
     `;
     tables.appendChild(tr);
 }
-
-
 
 document.getElementById('triangle').addEventListener('click', function(){
     const triangleWidth = getInputValue ('triangle-width');
@@ -134,3 +135,5 @@ for (const card of cards){
         color.innerHTML = "#" + randomColor;
     })
 }
+
+
