@@ -124,3 +124,12 @@ document.getElementById('ellipse').addEventListener('click', function(){
     const ellipse = multiplications(ellipseWidth, ellipseHeight, pi).toFixed(2);
     tablecreate(serial, ellipseName, ellipse);
 })
+
+const cards = document.getElementsByClassName('card');
+for (const card of cards){
+    card.addEventListener('mouseenter', function(){
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        card.style.backgroundColor = "#" + randomColor;
+        color.innerHTML = "#" + randomColor;
+    })
+}
