@@ -46,7 +46,7 @@ document.getElementById('triangle').addEventListener('click', function(){
     }
 
     serial += 1; 
-    const triangle = multiplications (triangleWidth, triangleHeight, triangleHalf);
+    const triangle = multiplications (triangleWidth, triangleHeight, triangleHalf).toFixed(2);
     const triangleString = parseInt(triangle)
     const triangleName = document.getElementById('triangle-header').innerText;
     tablecreate(serial, triangleName, triangleString);
@@ -62,7 +62,7 @@ document.getElementById('rectangle').addEventListener('click', function(){
     serial += 1;
 
     const rectangleName = document.getElementById('rectangle-name').innerText;
-    const rectangle = multiplications (rectangleWidth, rectangleHeight, false);
+    const rectangle = multiplications (rectangleWidth, rectangleHeight, false).toFixed(2);
     tablecreate(serial, rectangleName, rectangle);
 })
 
@@ -77,7 +77,7 @@ document.getElementById('parallelogram').addEventListener('click', function(){
     serial += 1;
     const parallelogramName = document.getElementById('parallelogram-name').innerText
 
-    const parallelogram = multiplications(parallelogramWidth, parallelogramHeight, false);
+    const parallelogram = multiplications(parallelogramWidth, parallelogramHeight, false).toFixed(2);
     tablecreate(serial, parallelogramName, parallelogram);
 })
 
@@ -92,13 +92,14 @@ document.getElementById('rombus').addEventListener('click', function(){
     serial += 1;
 
     const rombusName = document.getElementById('rhombus-name').innerText;
-    const rombus = multiplications(rombusWidth, rombusHeight, rom);
+    const rombus = multiplications(rombusWidth, rombusHeight, rom).toFixed(2);
     tablecreate(serial, rombusName, rombus);
 })
 
 document.getElementById('pentagon').addEventListener('click', function(){
     const pentagonWidth = getInputValue('pentagon-width');
     const pentagonHeight = getInputValue('pentagon-height');
+    const panta = 0.5;
     if (pentagonWidth == '' || pentagonHeight == '' || pentagonHeight < 0 || pentagonWidth < 0 || isNaN(pentagonWidth) || isNaN(pentagonHeight)) {
         alert('please provide a valid number');
         return;
@@ -106,7 +107,7 @@ document.getElementById('pentagon').addEventListener('click', function(){
     serial += 1;
 
     const pentagonName = document.getElementById('pentagon-name').innerText;
-    const pentagon = multiplications(pentagonWidth, pentagonHeight, false);
+    const pentagon = multiplications(pentagonWidth, pentagonHeight, panta).toFixed(2);
     tablecreate(serial, pentagonName, pentagon);
 })
 
