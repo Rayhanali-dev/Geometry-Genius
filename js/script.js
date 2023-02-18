@@ -26,13 +26,14 @@ function tablecreate(serial, name, area) {
     const tables = document.getElementById('calculate');
     const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td>${serial}.</td>
-        <td>${name}</td>
-        <td>${area}cm <sup>2<sup> </td>
-        <td class="bg-blue-400 cursor-pointer rounded text-center">Convert to m2</td>
+        <td class="p-2">${serial}.</td>
+        <td class="p-2">${name}</td>
+        <td class="p-2">${area}cm<sup>2<sup></td>
+        <td class="bg-blue-400 cursor-pointer rounded">Convert to m2</td>
     `;
     tables.appendChild(tr);
 }
+
 
 
 document.getElementById('triangle').addEventListener('click', function(){
