@@ -63,7 +63,8 @@ document.getElementById('rectangle').addEventListener('click', function(){
 
     const rectangleName = document.getElementById('rectangle-name').innerText;
     const rectangle = multiplications (rectangleWidth, rectangleHeight, false).toFixed(2);
-    tablecreate(serial, rectangleName, rectangle);
+    const rectangleString = parseInt(rectangle);
+    tablecreate(serial, rectangleName, rectangleString);
 })
 
 document.getElementById('parallelogram').addEventListener('click', function(){
@@ -76,15 +77,15 @@ document.getElementById('parallelogram').addEventListener('click', function(){
 
     serial += 1;
     const parallelogramName = document.getElementById('parallelogram-name').innerText
-
     const parallelogram = multiplications(parallelogramWidth, parallelogramHeight, false).toFixed(2);
-    tablecreate(serial, parallelogramName, parallelogram);
+    const parallelogramString = parseInt(parallelogram);
+    tablecreate(serial, parallelogramName, parallelogramString);
 })
 
 document.getElementById('rombus').addEventListener('click', function(){
     const rombusWidth = getInputValue('rombus-width');
     const rombusHeight = getInputValue('rombus-height');
-    const rom = 0.5;
+    const rombusHalf = 0.5;
     if (rombusWidth == '' || rombusHeight == '' || rombusHeight < 0 || rombusWidth < 0 || isNaN(rombusWidth) || isNaN(rombusHeight)) {
         alert('please provide a valid number');
         return;
@@ -92,8 +93,9 @@ document.getElementById('rombus').addEventListener('click', function(){
     serial += 1;
 
     const rombusName = document.getElementById('rhombus-name').innerText;
-    const rombus = multiplications(rombusWidth, rombusHeight, rom).toFixed(2);
-    tablecreate(serial, rombusName, rombus);
+    const rombus = multiplications(rombusWidth, rombusHeight, rombusHalf).toFixed(2);
+    const rombusString = parseInt(rombus);
+    tablecreate(serial, rombusName, rombusString);
 })
 
 document.getElementById('pentagon').addEventListener('click', function(){
@@ -108,7 +110,8 @@ document.getElementById('pentagon').addEventListener('click', function(){
 
     const pentagonName = document.getElementById('pentagon-name').innerText;
     const pentagon = multiplications(pentagonWidth, pentagonHeight, panta).toFixed(2);
-    tablecreate(serial, pentagonName, pentagon);
+    const pentagonString = parseInt(pentagon)
+    tablecreate(serial, pentagonName, pentagonString);
 })
 
 document.getElementById('ellipse').addEventListener('click', function(){
