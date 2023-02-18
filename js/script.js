@@ -39,7 +39,7 @@ document.getElementById('triangle').addEventListener('click', function(){
     const triangleWidth = getInputValue ('triangle-width');
     const triangleHeight = getInputValue('trianlge-height');
     const triangleHalf = getInnerText ('triangle-half');
-    if (triangleWidth == '' || triangleHeight == '' || triangleHalf < 0 || triangleWidth < 0 || isNaN(triangleWidth) || isNaN(triangleHeight)) {
+    if (triangleWidth == '' || triangleHeight == '' || triangleHeight < 0 || triangleWidth < 0 || isNaN(triangleWidth) || isNaN(triangleHeight)) {
         alert('please provide a valid number');
         return;
     }
@@ -68,7 +68,7 @@ document.getElementById('rectangle').addEventListener('click', function(){
 document.getElementById('parallelogram').addEventListener('click', function(){
     const parallelogramWidth = getInputValue('parallelogram-width');
     const parallelogramHeight = getInputValue('parallelogram-height');
-    if (parallelogramWidth == '' || parallelogramHeight == '' || isNaN(parallelogramWidth) || isNaN(parallelogramHeight)) {
+    if (parallelogramWidth == '' || parallelogramHeight == '' || parallelogramHeight < 0 || parallelogramWidth < 0 || isNaN(parallelogramWidth) || isNaN(parallelogramHeight)) {
         alert('please provide a valid number');
         return;
     }
@@ -84,7 +84,7 @@ document.getElementById('rombus').addEventListener('click', function(){
     const rombusWidth = getInputValue('rombus-width');
     const rombusHeight = getInputValue('rombus-height');
 
-    if (rombusWidth == '' || rombusHeight == '' || isNaN(rombusWidth) || isNaN(rombusHeight)) {
+    if (rombusWidth == '' || rombusHeight == '' || rombusHeight < 0 || rombusWidth < 0 || isNaN(rombusWidth) || isNaN(rombusHeight)) {
         alert('please provide a valid number');
         return;
     }
@@ -98,7 +98,7 @@ document.getElementById('rombus').addEventListener('click', function(){
 document.getElementById('pentagon').addEventListener('click', function(){
     const pentagonWidth = getInputValue('pentagon-width');
     const pentagonHeight = getInputValue('pentagon-height');
-    if (pentagonWidth == '' || pentagonHeight == '' || isNaN(pentagonWidth) || isNaN(pentagonHeight)) {
+    if (pentagonWidth == '' || pentagonHeight == '' || pentagonHeight < 0 || pentagonWidth < 0 || isNaN(pentagonWidth) || isNaN(pentagonHeight)) {
         alert('please provide a valid number');
         return;
     }
@@ -113,7 +113,7 @@ document.getElementById('ellipse').addEventListener('click', function(){
     const ellipseWidth = getInputValue('ellipse-width');
     const ellipseHeight = getInputValue('ellipse-height');
 
-    if (ellipseWidth == '' || ellipseHeight == '' || isNaN(ellipseWidth) || isNaN(ellipseHeight)) {
+    if (ellipseWidth == '' || ellipseHeight == '' || ellipseHeight < 0 || ellipseWidth < 0 || isNaN(ellipseWidth) || isNaN(ellipseHeight)) {
         alert('please provide a valid number');
         return;
     }
