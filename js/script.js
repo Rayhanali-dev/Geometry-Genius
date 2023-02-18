@@ -2,7 +2,7 @@ let serial = 0;
 // get the inner text of the element
 function getInnerText (para) {
     const element = document.getElementById(para);
-    const elementText = parseInt(element.innerText);
+    const elementText = parseFloat(element.innerText);
     return elementText;
 }
 
@@ -39,7 +39,7 @@ function tablecreate(serial, name, area) {
 document.getElementById('triangle').addEventListener('click', function(){
     const triangleWidth = getInputValue ('triangle-width');
     const triangleHeight = getInputValue('trianlge-height');
-    const triangleHalf = getInnerText ('triangle-half');
+    const triangleHalf = 0.5;
     if (triangleWidth == '' || triangleHeight == '' || triangleHeight < 0 || triangleWidth < 0 || isNaN(triangleWidth) || isNaN(triangleHeight)) {
         alert('please provide a valid number');
         return;
@@ -84,7 +84,7 @@ document.getElementById('parallelogram').addEventListener('click', function(){
 document.getElementById('rombus').addEventListener('click', function(){
     const rombusWidth = getInputValue('rombus-width');
     const rombusHeight = getInputValue('rombus-height');
-
+    const rom = 0.5;
     if (rombusWidth == '' || rombusHeight == '' || rombusHeight < 0 || rombusWidth < 0 || isNaN(rombusWidth) || isNaN(rombusHeight)) {
         alert('please provide a valid number');
         return;
@@ -92,7 +92,7 @@ document.getElementById('rombus').addEventListener('click', function(){
     serial += 1;
 
     const rombusName = document.getElementById('rhombus-name').innerText;
-    const rombus = multiplications(rombusWidth, rombusHeight, false);
+    const rombus = multiplications(rombusWidth, rombusHeight, rom);
     tablecreate(serial, rombusName, rombus);
 })
 
