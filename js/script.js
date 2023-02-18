@@ -1,4 +1,3 @@
-
 let serial = 0;
 // get the inner text of the element
 function getInnerText (para) {
@@ -135,5 +134,3 @@ for (const card of cards){
         color.innerHTML = "#" + randomColor;
     })
 }
-
-
